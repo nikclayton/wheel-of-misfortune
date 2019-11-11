@@ -1,0 +1,44 @@
+---
+tiles:
+  - img: /img/gus.jpg
+  - img: /img/cheynee.jpg
+  - img: /img/lexi.jpg
+  - img: /img/ivana.jpg
+  - img: /img/rachel.jpg
+  - img: /img/steffi.jpg
+  - img: /img/pippa.jpg
+  - img: /img/jamie.jpg
+  - img: /img/karen.jpg
+  - img: /img/leah.jpg
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wheel of Misfortune</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div>
+      <div>
+        <canvas id="wheel"></canvas>
+      </div>
+      <div>
+        <button class="button">Spin the wheel</button>
+      </div>
+    </div>
+
+    <div id="tiles">
+      {% for tile in page.tiles %}
+        <img id="{{tile.name}}" src="{{tile.img}}">
+      {% endfor %}
+    </div>
+    <script src="wom.js"></script>
+
+    <script>
+      window.addEventListener("load", function() {
+        new Wheel("#wheel", "#tiles img", "button");
+      });
+    </script>
+  </body>
+</html>

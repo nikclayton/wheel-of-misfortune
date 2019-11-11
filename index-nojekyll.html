@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wheel of Misfortune</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="wom">
+      <div id="wheel-container">
+        <canvas id="wheel"></canvas>
+      </div>
+      <div>
+        <button class="button">Spin the wheel</button>
+      </div>
+    </div>
+
+    <div id="tiles">
+      <img id="" src="img/gus.jpg">
+      <img id="" src="img/cheynee.jpg">
+      <img id="" src="img/lexi.jpg">
+      <img id="" src="img/ivana.jpg">
+      <img id="" src="img/rachel.jpg">
+      <img id="" src="img/steffi.jpg">
+      <img id="" src="img/pippa.jpg">
+      <img id="" src="img/jamie.jpg">
+      <img id="" src="img/karen.jpg">
+      <img id="" src="img/leah.jpg">
+    </div>
+
+    <script src="wom.js"></script>
+
+    <script>
+      window.addEventListener("load", function() {
+        new Wheel("#wheel", "#tiles img", "button");
+      });
+    </script>
+  </body>
+</html>

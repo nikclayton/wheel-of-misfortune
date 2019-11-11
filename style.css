@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 64em;
+  margin: auto;
+  padding: 2rem;
+}
+
+button {
+  padding: 1rem;
+  border: 2px solid orange;
+  background-color: white;
+}
+
+button:hover {
+  color: white;
+  background-color: orange;
+  border-color: 2px solid rgba(0, 0, 0, .25);
+}
+
+button:disabled {
+  color: white;
+  background-color: grey;
+  border: 2px solid grey;
+}
+
+#tiles {
+  display: none;
+}
